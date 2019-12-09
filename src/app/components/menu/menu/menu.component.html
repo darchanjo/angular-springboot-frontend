@@ -1,0 +1,18 @@
+<header>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">    
+    <!-- <div><a href="http://localhost:4200/#" class="navbar-brand">Home</a></div> -->
+    <ul class="navbar-nav navbar-collapse justify-content-start">
+        <li class="nav-item">
+            <a routerLink="home" class="nav-link" routerLinkActive="active">Listar</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="adicionar" class="nav-link" routerLinkActive="active">Adicionar</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li class="nav-item">
+            <a *ngIf="isLoggedIn" routerLink="logout" class="nav-link">Logout</a>
+        </li>
+    </ul>
+</nav>
+</header>

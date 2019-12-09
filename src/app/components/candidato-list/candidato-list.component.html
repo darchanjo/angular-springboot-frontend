@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Relação de Candidato</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+          <th *ngFor="let col of cols">
+              {{col.header}}
+          </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidato of candidatos">
+          <td>{{candidato.nome}}</td>
+          <td>{{candidato.sobrenome}}</td>
+          <td>{{candidato.email}}</td>
+          <td class="text-right">
+              <button (click)="deleteCandidato(candidato.id)" class="btn btn-danger"><i class="fa fa-trash"></i>&nbsp;Deletar</button>
+              <button (click)="updateCandidato(candidato.id)" class="btn btn-info" style="margin-left: 10px;"><i class="fa fa-edit"></i>&nbsp;Atualizar</button>
+              <button (click)="candidatoDetails(candidato.id)" class="btn btn-warning" style="margin-left: 10px;"><i class="fa fa-info-circle"></i>&nbsp;Detalhe</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
